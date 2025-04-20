@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var model: Model = Model()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            List(model.menuItems) { item in
+                Text(item.name)
+            }
         }
     }
 }
