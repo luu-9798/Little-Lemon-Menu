@@ -10,8 +10,3 @@ struct ContentView: View {
         }
     }
 }
-
-struct Item: Identifiable {
-    let id  = UUID()
-    let name: String
-}
